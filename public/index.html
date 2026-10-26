@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>AC3 | Cadastro de Alunos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+  <header><div class="badge">UniFECAF · Atividade AC3</div><h1>Cadastro de Alunos</h1>
+    <p>Aplicação CRUD com Node.js e MySQL</p></header>
+  <section class="card"><h2 id="titulo-form">Novo aluno</h2>
+    <form id="form"><input type="hidden" id="id">
+      <label for="nome">Nome</label><input type="text" id="nome" maxlength="100" placeholder="Nome completo" required>
+      <label for="email">E-mail</label><input type="email" id="email" maxlength="120" placeholder="aluno@exemplo.com" required>
+      <label for="curso">Curso</label><input type="text" id="curso" maxlength="100" placeholder="Nome do curso" required>
+      <div class="acoes"><button type="submit" id="salvar">Cadastrar aluno</button><button type="button" id="cancelar" class="secondary" hidden>Cancelar edição</button></div>
+    </form>
+  </section>
+  <section class="card"><div class="list-head"><h2>Alunos cadastrados</h2><button class="secondary" id="atualizar">Atualizar lista</button></div>
+    <p id="mensagem" role="status" aria-live="polite"></p>
+    <div class="table-wrap"><table><thead><tr><th>ID</th><th>Nome</th><th>E-mail</th><th>Curso</th><th>Ações</th></tr></thead><tbody id="lista"></tbody></table></div>
+  </section>
+  <footer>Desenvolvido para AC3 · Gabriel Silva Santos Francisco · RA 250131</footer>
+</main><script src="script.js"></script>
+</body></html>
